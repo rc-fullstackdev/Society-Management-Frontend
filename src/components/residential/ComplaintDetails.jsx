@@ -45,7 +45,7 @@ const ComplaintDetails = () => {
                 ) : (
                     <>
                         <div className="flex justify-end mb-4">
-                            <AddBookingButton />
+                            <AddComplaintButton />
                         </div>
 
                         <div className='flex justify-end mb-2'>
