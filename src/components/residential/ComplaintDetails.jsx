@@ -48,15 +48,6 @@ const ComplaintDetails = () => {
                             <AddComplaintButton />
                         </div>
 
-                        <div className='flex justify-end mb-2'>
-                            <Button
-                                onClick={() => navigate("/residential/complaint/form")}
-                                className="bg-[#145EFB] hover:bg-blue-700 cursor-pointer text-white px-4 py-5"
-                            >
-                                Add Complaint
-                            </Button>
-                        </div>
-
                         <div className="overflow-x-auto w-full border border-gray-200 rounded-lg">
                             <table className="min-w-full divide-y divide-gray-200">
                                 <thead className="bg-[#145EFB]">
