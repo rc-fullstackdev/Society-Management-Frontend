@@ -3,11 +3,6 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'
 import { ToastContainer } from 'react-toastify'
 import "react-toastify/ReactToastify.css"
-import FacilityBookingForm from './components/residential/FacilityBookingForm'
-import ResidentFacilityBookingList from './components/residential/ResidentFacilityBookingList'
-import ResidentBookingDetails from './components/residential/ResidentBookingDetails'
-import GetResidentBookingList from './components/secretary/GetResidentBookingList'
-import GetResidentBookingDetails from './components/secretary/GetResidentBookingDetails'
 
 const Home = lazy(() => import("./pages/Home"))
 
@@ -36,6 +31,8 @@ const ComplaintInfoTable = lazy(() => import('./components/secretary/ComplaintIn
 const ComplaintInfoCard = lazy(() => import('./components/secretary/ComplaintInfoCard'))
 const SecretaryVisitorList = lazy(() => import('./components/secretary/SecretaryVisitorList'))
 const SecretaryVisitorDetails = lazy(() => import('./components/secretary/SecretaryVisitorDetails'))
+const GetResidentBookingList = lazy(() => import('./components/secretary/GetResidentBookingList'))
+const GetResidentBookingDetails = lazy(() => import('./components/secretary/GetResidentBookingDetails'))
 
 /* ------------------------ Residential Routes ----------------------------*/
 const ResidentialRegisterForm = lazy(() => import('./components/secretary/ResidentRegisterForm'))
@@ -51,6 +48,9 @@ const ComplaintForm = lazy(() => import('./components/residential/ComplaintForm'
 const ComplaintDetails = lazy(() => import('./components/residential/ComplaintDetails'))
 const ComplaintCard = lazy(() => import('./components/residential/ComplaintCard'))
 const ResidentGuestList = lazy(() => import('./components/residential/ResidentGuestList'))
+const FacilityBookingForm = lazy(() => import('./components/residential/FacilityBookingForm'))
+const ResidentFacilityBookingList = lazy(() => import('./components/residential/ResidentFacilityBookingList'))
+const ResidentBookingDetails = lazy(() => import('./components/residential/ResidentBookingDetails'))
 
 /* ------------------------ Security Guard Routes ----------------------------*/
 const GuardRegisterForm = lazy(() => import('./components/secretary/GuardRegisterForm'))

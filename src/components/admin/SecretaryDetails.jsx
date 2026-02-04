@@ -1,14 +1,17 @@
-import { Phone, MapPin, Mail, User } from "lucide-react";
+import { Phone, MapPin, Mail, User, ArrowLeft } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Loading from "../common/Loading";
 import { useLazyGetSocietyDetailsQuery } from "@/redux/api/admin.api";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
+import { Button } from "../ui/button";
 
 const SecretaryDetails = () => {
 
     const { id } = useParams();
+
+    const navigate = useNavigate()
 
     const [getSocietyDetails, { data, isLoading, isError }] = useLazyGetSocietyDetailsQuery();
 
@@ -33,10 +36,26 @@ const SecretaryDetails = () => {
             <Card className="w-full max-w-5xl rounded-3xl bg-gradient-to-br from-blue-50 to-white
         shadow-[0_12px_40px_rgba(59,130,246,0.35)] border-blue-100">
 
-                <CardHeader>
-                    <CardTitle className="text-center text-2xl text-blue-600">
-                        Society & Secretary Details
-                    </CardTitle>
+                <CardHeader className="px-6">
+                    <div className="flex items-center justify-between">
+
+                        <Button
+                            onClick={() => navigate(-1)}
+                            variant="ghost"
+                            className="group flex items-center gap-2 rounded-full px-4 py-2 text-blue-600 hover:bg-blue-100 transition-all cursor-pointer" >
+                            <ArrowLeft
+                                size={18}
+                                className="transition-transform group-hover:-translate-x-1"
+                            />
+                            Back
+                        </Button>
+
+                        <CardTitle className="text-center font-semibold text-2xl text-blue-600">
+                            Society & Secretary Details
+                        </CardTitle>
+
+                        <div className="w-[88px]" />
+                    </div>
                 </CardHeader>
 
                 <CardContent>
